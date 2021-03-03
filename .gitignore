@@ -5,3 +5,6 @@
 bin/
 build/
 lib/
+
+# datos sensibles godot
+export_presets.cfg
