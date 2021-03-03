@@ -14,7 +14,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://admob-lib/admob.gd"
 }, {
-"base": "EditorVCSInterface",
+"base": "",
 "class": "GitAPI",
 "language": "NativeScript",
 "path": "res://git_api.gdns"
@@ -26,7 +26,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Mobile_plantilla"
+config/name="Aggrolife"
 run/main_scene="res://Tests/TestScene.tscn"
 config/icon="res://icon.png"
 
