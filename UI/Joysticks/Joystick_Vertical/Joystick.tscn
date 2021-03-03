@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/Joysticks/Joystick_Vertical/Joystick.gd" type="Script" id=1]
+[ext_resource path="res://UI/Joysticks/Joystick.png" type="Texture" id=2]
+[ext_resource path="res://UI/Joysticks/JoystickC.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 60, 60 )
+
+[node name="V_Joystick" type="Node2D"]
+script = ExtResource( 1 )
+back_sprite = ExtResource( 3 )
+front_sprite = ExtResource( 2 )
+
+[node name="back_Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.13, 0.13 )
+texture = ExtResource( 3 )
+
+[node name="front_sprite" type="Sprite" parent="."]
+scale = Vector2( 0.13, 0.13 )
+texture = ExtResource( 2 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+shape = SubResource( 1 )
+shape_centered = false
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_Area_pressed"]
+[connection signal="released" from="TouchScreenButton" to="." method="_on_Area_released"]
